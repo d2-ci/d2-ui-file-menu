@@ -25,17 +25,13 @@ var OpenMenuItem = function (_Component) {
         _this.onClose = function () {
             _this.toggleFavoritesDialog();
 
-            if (_this.props.onClose) {
-                _this.props.onClose();
-            }
+            _this.props.onClose();
         };
 
         _this.onOpen = function (id) {
             _this.toggleFavoritesDialog();
 
-            if (_this.props.onOpen) {
-                _this.props.onOpen(id);
-            }
+            _this.props.onOpen(id);
         };
 
         _this.toggleFavoritesDialog = function () {
@@ -51,7 +47,11 @@ var OpenMenuItem = function (_Component) {
     _createClass(OpenMenuItem, [{
         key: 'render',
         value: function render() {
-            var fileType = this.props.fileType;
+            var _props = this.props,
+                refreshDialogData = _props.refreshDialogData,
+                fileType = _props.fileType,
+                onRename = _props.onRename,
+                onDelete = _props.onDelete;
 
 
             return React.createElement(
@@ -69,10 +69,13 @@ var OpenMenuItem = function (_Component) {
                 ),
                 React.createElement(FavoritesDialog, {
                     open: this.state.dialogIsOpen,
+                    refreshData: refreshDialogData,
                     type: fileType,
                     d2: this.context.d2,
                     onRequestClose: this.onClose,
-                    onFavoriteSelect: this.onOpen
+                    onFavoriteSelect: this.onOpen,
+                    onFavoriteRename: onRename,
+                    onFavoriteDelete: onDelete
                 })
             );
         }
@@ -86,15 +89,21 @@ OpenMenuItem.contextTypes = {
 };
 
 OpenMenuItem.defaultProps = {
+    refreshData: false,
     fileType: null,
-    onOpen: null,
-    onClose: null
+    onOpen: Function.prototype,
+    onClose: Function.prototype,
+    onRename: Function.prototype,
+    onDelete: Function.prototype
 };
 
 OpenMenuItem.propTypes = {
+    refreshData: PropTypes.bool,
     fileType: PropTypes.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
     onOpen: PropTypes.func,
-    onClose: PropTypes.func
+    onClose: PropTypes.func,
+    onRename: PropTypes.func,
+    onDelete: PropTypes.func
 };
 
 export default OpenMenuItem;

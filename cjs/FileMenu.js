@@ -173,11 +173,21 @@ var FileMenu = exports.FileMenu = function (_Component) {
 
         _this.onOpen = function (id) {
             _this.setFileModel(id);
+            _this.setState({ refreshDialogData: false });
 
             _this.closeMenu();
 
-            if (_this.props.onOpen) {
-                _this.props.onOpen(id);
+            _this.props.onOpen(id);
+        };
+
+        _this.onRename = function (form, id) {
+            if (_this.state.fileModel.id === id) {
+                _this.setFileModel(_this.state.fileModel.id);
+                _this.setState({ refreshDialogData: true });
+
+                _this.closeMenu();
+
+                _this.props.onRename(form, id);
             }
         };
 
@@ -186,24 +196,27 @@ var FileMenu = exports.FileMenu = function (_Component) {
 
             _this.closeMenu();
 
-            if (_this.props.onNew) {
-                _this.props.onNew();
+            _this.props.onNew();
+        };
+
+        _this.onDelete = function (id) {
+            if (_this.state.fileModel.id === id) {
+                _this.clearFileModel();
+                _this.setState({ refreshDialogData: true });
+
+                _this.closeMenu();
+
+                _this.props.onDelete(id);
             }
         };
 
-        _this.onDelete = function () {
-            _this.clearFileModel();
-
-            _this.closeMenu();
-
-            if (_this.props.onDelete) {
-                _this.props.onDelete();
-            }
-        };
-
-        _this.onAction = function (callback) {
+        _this.onAction = function (callback, refreshDialogData) {
             return function (args) {
                 _this.closeMenu();
+
+                if (refreshDialogData) {
+                    _this.setState({ refreshDialogData: true });
+                }
 
                 if (callback) {
                     callback(args);
@@ -214,7 +227,8 @@ var FileMenu = exports.FileMenu = function (_Component) {
         _this.state = {
             menuIsOpen: false,
             anchorEl: null,
-            fileModel: null
+            fileModel: null,
+            refreshDialogData: false
         };
         return _this;
     }
@@ -227,7 +241,6 @@ var FileMenu = exports.FileMenu = function (_Component) {
                 fileType = _props.fileType,
                 onSave = _props.onSave,
                 onSaveAs = _props.onSaveAs,
-                onRename = _props.onRename,
                 onTranslate = _props.onTranslate,
                 onShare = _props.onShare,
                 onError = _props.onError;
@@ -256,23 +269,26 @@ var FileMenu = exports.FileMenu = function (_Component) {
                     _react2.default.createElement(_OpenMenuItem2.default, {
                         enabled: true,
                         fileType: fileType,
+                        refreshDialogData: this.state.refreshDialogData,
                         onOpen: this.onOpen,
-                        onClose: this.onAction()
+                        onClose: this.onAction(),
+                        onRename: this.onRename,
+                        onDelete: this.onDelete
                     }),
                     _react2.default.createElement(_Divider2.default, null),
                     _react2.default.createElement(_SaveMenuItem2.default, {
                         enabled: Boolean(!this.state.fileModel || this.state.fileModel && this.state.fileModel.access.update),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
-                        onSave: this.onAction(onSave),
-                        onSaveAs: this.onAction(onSaveAs),
+                        onSave: this.onAction(onSave, true),
+                        onSaveAs: this.onAction(onSaveAs, true),
                         onClose: this.onAction()
                     }),
                     _react2.default.createElement(_SaveAsMenuItem2.default, {
                         enabled: Boolean(this.state.fileModel),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
-                        onSaveAs: this.onAction(onSaveAs),
+                        onSaveAs: this.onAction(onSaveAs, true),
                         onClose: this.onAction()
                     }),
                     _react2.default.createElement(_Divider2.default, null),
@@ -280,7 +296,7 @@ var FileMenu = exports.FileMenu = function (_Component) {
                         enabled: Boolean(this.state.fileModel && this.state.fileModel.access.update),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
-                        onRename: this.onAction(onRename),
+                        onRename: this.onRename,
                         onRenameError: this.onAction(onError),
                         onClose: this.onAction()
                     }),
@@ -329,15 +345,15 @@ FileMenu.defaultProps = {
     d2: null,
     fileType: 'chart',
     fileId: null,
-    onNew: null,
-    onOpen: null,
-    onSave: null,
-    onSaveAs: null,
-    onRename: null,
-    onTranslate: null,
-    onShare: null,
-    onDelete: null,
-    onError: null
+    onNew: Function.prototype,
+    onOpen: Function.prototype,
+    onSave: Function.prototype,
+    onSaveAs: Function.prototype,
+    onRename: Function.prototype,
+    onTranslate: Function.prototype,
+    onShare: Function.prototype,
+    onDelete: Function.prototype,
+    onError: Function.prototype
 };
 
 FileMenu.propTypes = {

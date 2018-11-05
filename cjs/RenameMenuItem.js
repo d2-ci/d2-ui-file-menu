@@ -75,7 +75,7 @@ var RenameMenuItem = function (_Component) {
         };
 
         _this.onDialogReturn = function (success) {
-            return function (args) {
+            return function () {
                 var _this$props = _this.props,
                     onRename = _this$props.onRename,
                     onRenameError = _this$props.onRenameError;
@@ -83,10 +83,10 @@ var RenameMenuItem = function (_Component) {
 
                 _this.toggleRenameDialog();
 
-                if (success && onRename) {
-                    onRename(args);
-                } else if (onRenameError) {
-                    onRenameError(args);
+                if (success) {
+                    onRename.apply(undefined, arguments);
+                } else {
+                    onRenameError.apply(undefined, arguments);
                 }
             };
         };
@@ -145,9 +145,9 @@ RenameMenuItem.defaultProps = {
     enabled: false,
     fileType: null,
     fileModel: null,
-    onRename: null,
-    onRenameError: null,
-    onClose: null
+    onRename: Function.prototype,
+    onRenameError: Function.prototype,
+    onClose: Function.prototype
 };
 
 RenameMenuItem.propTypes = {

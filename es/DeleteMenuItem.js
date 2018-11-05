@@ -25,13 +25,11 @@ var DeleteMenuItem = function (_Component) {
         _this.onClose = function () {
             _this.toggleDeleteDialog();
 
-            if (_this.props.onClose) {
-                _this.props.onClose();
-            }
+            _this.props.onClose();
         };
 
         _this.onDialogReturn = function (success) {
-            return function (args) {
+            return function () {
                 var _this$props = _this.props,
                     onDelete = _this$props.onDelete,
                     onDeleteError = _this$props.onDeleteError;
@@ -39,10 +37,10 @@ var DeleteMenuItem = function (_Component) {
 
                 _this.toggleDeleteDialog();
 
-                if (success && onDelete) {
-                    onDelete(args);
-                } else if (onDeleteError) {
-                    onDeleteError(args);
+                if (success) {
+                    onDelete.apply(undefined, arguments);
+                } else {
+                    onDeleteError.apply(undefined, arguments);
                 }
             };
         };
@@ -98,9 +96,9 @@ DeleteMenuItem.defaultProps = {
     enabled: false,
     fileType: null,
     fileModel: null,
-    onDelete: null,
-    onDeleteError: null,
-    onClose: null
+    onDelete: Function.prototype,
+    onDeleteError: Function.prototype,
+    onClose: Function.prototype
 };
 
 DeleteMenuItem.propTypes = {

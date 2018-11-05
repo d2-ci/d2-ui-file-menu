@@ -93,9 +93,7 @@ var RenameDialog = function (_Component) {
                                 throw new Error(response);
 
                             case 15:
-                                if (onRequestRename) {
-                                    onRequestRename(payload);
-                                }
+                                onRequestRename(payload, fileModel.id);
 
                             case 16:
                                 _context.next = 21;
@@ -105,9 +103,7 @@ var RenameDialog = function (_Component) {
                                 _context.prev = 18;
                                 _context.t0 = _context['catch'](4);
 
-                                if (onRequestRenameError) {
-                                    onRequestRenameError(_context.t0);
-                                }
+                                onRequestRenameError(_context.t0);
 
                             case 21:
                             case 'end':
@@ -216,9 +212,9 @@ RenameDialog.defaultProps = {
     open: false,
     fileType: null,
     fileModel: null,
-    onRequestClose: null,
-    onRequestRename: null,
-    onRequestRenameError: null
+    onRequestClose: Function.prototype,
+    onRequestRename: Function.prototype,
+    onRequestRenameError: Function.prototype
 };
 
 RenameDialog.propTypes = {
