@@ -1,6 +1,5 @@
 {
   "name": "@dhis2/d2-ui-file-menu",
-  "version": "5.0.1",
   "description": "File menu component for DHIS2",
   "main": "./index.js",
   "module": "./index.js",
@@ -47,5 +46,6 @@
     "@dhis2/d2-i18n-generate": "^1.0.18",
     "husky": "^1.0.0-rc.4",
     "prettier": "^1.12.1"
-  }
+  },
+  "version": "5.0.1"
 }
