@@ -171,7 +171,8 @@ export var FileMenu = function (_Component) {
                 onSaveAs = _props.onSaveAs,
                 onTranslate = _props.onTranslate,
                 onShare = _props.onShare,
-                onError = _props.onError;
+                onError = _props.onError,
+                dialogMaxWidth = _props.dialogMaxWidth;
 
 
             return React.createElement(
@@ -201,7 +202,8 @@ export var FileMenu = function (_Component) {
                         onOpen: this.onOpen,
                         onClose: this.onAction(),
                         onRename: this.onRename,
-                        onDelete: this.onDelete
+                        onDelete: this.onDelete,
+                        dialogMaxWidth: dialogMaxWidth
                     }),
                     React.createElement(Divider, null),
                     React.createElement(SaveMenuItem, {
@@ -271,6 +273,7 @@ FileMenu.childContextTypes = {
 };
 
 FileMenu.defaultProps = {
+    dialogMaxWidth: 'md',
     d2: null,
     fileType: 'chart',
     fileId: null,
@@ -286,6 +289,7 @@ FileMenu.defaultProps = {
 };
 
 FileMenu.propTypes = {
+    dialogMaxWidth: PropTypes.oneOf(['sm', 'md', 'lg']),
     d2: PropTypes.object,
     fileType: PropTypes.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
     fileId: PropTypes.string,

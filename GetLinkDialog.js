@@ -49,7 +49,7 @@ var GetLinkDialog = function GetLinkDialog(props, context) {
 
     return React.createElement(
         Dialog,
-        { open: open, onClose: onRequestClose },
+        { open: open, onClose: onRequestClose, maxWidth: 'md' },
         React.createElement(
             DialogContent,
             null,
