@@ -29,7 +29,7 @@ var DeleteDialog = function DeleteDialog(props) {
 
     return React.createElement(
         Dialog,
-        { open: open, onClose: onRequestClose, maxWidth: false },
+        { open: open, onClose: onRequestClose, maxWidth: 'sm' },
         React.createElement(
             DialogTitle,
             null,

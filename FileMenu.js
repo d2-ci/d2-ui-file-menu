@@ -53,52 +53,6 @@ export var FileMenu = function (_Component) {
             }
         };
 
-        _this.setFileModel = function () {
-            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(id) {
-                var model;
-                return _regeneratorRuntime.wrap(function _callee$(_context) {
-                    while (1) {
-                        switch (_context.prev = _context.next) {
-                            case 0:
-                                _context.next = 2;
-                                return _this.props.d2.models[_this.props.fileType].get(id);
-
-                            case 2:
-                                model = _context.sent;
-
-                                _this.setState({ fileModel: model });
-
-                            case 4:
-                            case 'end':
-                                return _context.stop();
-                        }
-                    }
-                }, _callee, _this2);
-            }));
-
-            return function (_x) {
-                return _ref.apply(this, arguments);
-            };
-        }();
-
-        _this.clearFileModel = function () {
-            _this.setState({ fileModel: null });
-        };
-
-        _this.toggleMenu = function (event) {
-            _this.setState({
-                menuIsOpen: !_this.state.menuIsOpen,
-                anchorEl: _this.state.menuIsOpen ? null : event.currentTarget
-            });
-        };
-
-        _this.closeMenu = function () {
-            _this.setState({
-                menuIsOpen: false,
-                anchorEl: null
-            });
-        };
-
         _this.onOpen = function (id) {
             _this.setFileModel(id);
             _this.setState({ refreshDialogData: false });
@@ -150,6 +104,52 @@ export var FileMenu = function (_Component) {
                     callback(args);
                 }
             };
+        };
+
+        _this.setFileModel = function () {
+            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(id) {
+                var model;
+                return _regeneratorRuntime.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                _context.next = 2;
+                                return _this.props.d2.models[_this.props.fileType].get(id);
+
+                            case 2:
+                                model = _context.sent;
+
+                                _this.setState({ fileModel: model });
+
+                            case 4:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, _this2);
+            }));
+
+            return function (_x) {
+                return _ref.apply(this, arguments);
+            };
+        }();
+
+        _this.clearFileModel = function () {
+            _this.setState({ fileModel: null });
+        };
+
+        _this.toggleMenu = function (event) {
+            _this.setState({
+                menuIsOpen: !_this.state.menuIsOpen,
+                anchorEl: _this.state.menuIsOpen ? null : event.currentTarget
+            });
+        };
+
+        _this.closeMenu = function () {
+            _this.setState({
+                menuIsOpen: false,
+                anchorEl: null
+            });
         };
 
         _this.state = {
