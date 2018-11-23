@@ -304,7 +304,7 @@ var styles = function styles(theme) {
     return {
         menuButton: {
             textTransform: 'none',
-            fontSize: '16px',
+            fontSize: 15,
             fontWeight: 400
         }
     };
