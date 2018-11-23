@@ -21,7 +21,9 @@ var DeleteDialog = function DeleteDialog(props) {
 
     var deleteFavorite = function deleteFavorite() {
         if (fileModel) {
-            fileModel.delete().then(onRequestDelete(fileModel.id)).catch(onRequestDeleteError);
+            fileModel.delete().then(function () {
+                return onRequestDelete(fileModel.id);
+            }).catch(onRequestDeleteError);
         }
     };
 
