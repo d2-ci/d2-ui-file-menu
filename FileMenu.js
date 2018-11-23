@@ -53,52 +53,6 @@ export var FileMenu = function (_Component) {
             }
         };
 
-        _this.setFileModel = function () {
-            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(id) {
-                var model;
-                return _regeneratorRuntime.wrap(function _callee$(_context) {
-                    while (1) {
-                        switch (_context.prev = _context.next) {
-                            case 0:
-                                _context.next = 2;
-                                return _this.props.d2.models[_this.props.fileType].get(id);
-
-                            case 2:
-                                model = _context.sent;
-
-                                _this.setState({ fileModel: model });
-
-                            case 4:
-                            case 'end':
-                                return _context.stop();
-                        }
-                    }
-                }, _callee, _this2);
-            }));
-
-            return function (_x) {
-                return _ref.apply(this, arguments);
-            };
-        }();
-
-        _this.clearFileModel = function () {
-            _this.setState({ fileModel: null });
-        };
-
-        _this.toggleMenu = function (event) {
-            _this.setState({
-                menuIsOpen: !_this.state.menuIsOpen,
-                anchorEl: _this.state.menuIsOpen ? null : event.currentTarget
-            });
-        };
-
-        _this.closeMenu = function () {
-            _this.setState({
-                menuIsOpen: false,
-                anchorEl: null
-            });
-        };
-
         _this.onOpen = function (id) {
             _this.setFileModel(id);
             _this.setState({ refreshDialogData: false });
@@ -152,6 +106,52 @@ export var FileMenu = function (_Component) {
             };
         };
 
+        _this.setFileModel = function () {
+            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(id) {
+                var model;
+                return _regeneratorRuntime.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                _context.next = 2;
+                                return _this.props.d2.models[_this.props.fileType].get(id);
+
+                            case 2:
+                                model = _context.sent;
+
+                                _this.setState({ fileModel: model });
+
+                            case 4:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, _this2);
+            }));
+
+            return function (_x) {
+                return _ref.apply(this, arguments);
+            };
+        }();
+
+        _this.clearFileModel = function () {
+            _this.setState({ fileModel: null });
+        };
+
+        _this.toggleMenu = function (event) {
+            _this.setState({
+                menuIsOpen: !_this.state.menuIsOpen,
+                anchorEl: _this.state.menuIsOpen ? null : event.currentTarget
+            });
+        };
+
+        _this.closeMenu = function () {
+            _this.setState({
+                menuIsOpen: false,
+                anchorEl: null
+            });
+        };
+
         _this.state = {
             menuIsOpen: false,
             anchorEl: null,
@@ -171,8 +171,7 @@ export var FileMenu = function (_Component) {
                 onSaveAs = _props.onSaveAs,
                 onTranslate = _props.onTranslate,
                 onShare = _props.onShare,
-                onError = _props.onError,
-                dialogMaxWidth = _props.dialogMaxWidth;
+                onError = _props.onError;
 
 
             return React.createElement(
@@ -202,8 +201,7 @@ export var FileMenu = function (_Component) {
                         onOpen: this.onOpen,
                         onClose: this.onAction(),
                         onRename: this.onRename,
-                        onDelete: this.onDelete,
-                        dialogMaxWidth: dialogMaxWidth
+                        onDelete: this.onDelete
                     }),
                     React.createElement(Divider, null),
                     React.createElement(SaveMenuItem, {
@@ -273,7 +271,6 @@ FileMenu.childContextTypes = {
 };
 
 FileMenu.defaultProps = {
-    dialogMaxWidth: 'md',
     d2: null,
     fileType: 'chart',
     fileId: null,
@@ -289,7 +286,6 @@ FileMenu.defaultProps = {
 };
 
 FileMenu.propTypes = {
-    dialogMaxWidth: PropTypes.oneOf(['sm', 'md', 'lg']),
     d2: PropTypes.object,
     fileType: PropTypes.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
     fileId: PropTypes.string,

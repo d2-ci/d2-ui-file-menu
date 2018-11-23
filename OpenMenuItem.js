@@ -51,8 +51,7 @@ var OpenMenuItem = function (_Component) {
                 refreshDialogData = _props.refreshDialogData,
                 fileType = _props.fileType,
                 onRename = _props.onRename,
-                onDelete = _props.onDelete,
-                dialogMaxWidth = _props.dialogMaxWidth;
+                onDelete = _props.onDelete;
 
 
             return React.createElement(
@@ -76,8 +75,7 @@ var OpenMenuItem = function (_Component) {
                     onRequestClose: this.onClose,
                     onFavoriteSelect: this.onOpen,
                     onFavoriteRename: onRename,
-                    onFavoriteDelete: onDelete,
-                    dialogMaxWidth: dialogMaxWidth
+                    onFavoriteDelete: onDelete
                 })
             );
         }
@@ -96,8 +94,7 @@ OpenMenuItem.defaultProps = {
     onOpen: Function.prototype,
     onClose: Function.prototype,
     onRename: Function.prototype,
-    onDelete: Function.prototype,
-    dialogMaxWidth: 'md'
+    onDelete: Function.prototype
 };
 
 OpenMenuItem.propTypes = {
@@ -106,8 +103,7 @@ OpenMenuItem.propTypes = {
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
     onRename: PropTypes.func,
-    onDelete: PropTypes.func,
-    dialogMaxWidth: PropTypes.oneOf(['sm', 'md', 'lg'])
+    onDelete: PropTypes.func
 };
 
 export default OpenMenuItem;

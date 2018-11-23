@@ -21,13 +21,15 @@ var DeleteDialog = function DeleteDialog(props) {
 
     var deleteFavorite = function deleteFavorite() {
         if (fileModel) {
-            fileModel.delete().then(onRequestDelete(fileModel.id)).catch(onRequestDeleteError);
+            fileModel.delete().then(function () {
+                return onRequestDelete(fileModel.id);
+            }).catch(onRequestDeleteError);
         }
     };
 
     return React.createElement(
         Dialog,
-        { open: open, onClose: onRequestClose, maxWidth: false },
+        { open: open, onClose: onRequestClose, maxWidth: 'sm' },
         React.createElement(
             DialogTitle,
             null,
