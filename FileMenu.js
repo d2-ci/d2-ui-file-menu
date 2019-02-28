@@ -1,39 +1,111 @@
-import _regeneratorRuntime from 'babel-runtime/regenerator';
-import _asyncToGenerator from 'babel-runtime/helpers/asyncToGenerator';
-import _Object$getPrototypeOf from 'babel-runtime/core-js/object/get-prototype-of';
-import _classCallCheck from 'babel-runtime/helpers/classCallCheck';
-import _createClass from 'babel-runtime/helpers/createClass';
-import _possibleConstructorReturn from 'babel-runtime/helpers/possibleConstructorReturn';
-import _inherits from 'babel-runtime/helpers/inherits';
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+'use strict';
 
-import { withStyles } from '@material-ui/core/styles';
-import Menu from '@material-ui/core/Menu';
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.FileMenu = undefined;
 
-import i18n from '@dhis2/d2-i18n';
+var _regenerator = require('babel-runtime/regenerator');
 
-import NewMenuItem from './NewMenuItem';
-import OpenMenuItem from './OpenMenuItem';
-import SaveMenuItem from './SaveMenuItem';
-import SaveAsMenuItem from './SaveAsMenuItem';
-import RenameMenuItem from './RenameMenuItem';
-import TranslateMenuItem from './TranslateMenuItem';
-import ShareMenuItem from './ShareMenuItem';
-import GetLinkMenuItem from './GetLinkMenuItem';
-import DeleteMenuItem from './DeleteMenuItem';
+var _regenerator2 = _interopRequireDefault(_regenerator);
 
-export var FileMenu = function (_Component) {
-    _inherits(FileMenu, _Component);
+var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
+
+var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styles = require('@material-ui/core/styles');
+
+var _Menu = require('@material-ui/core/Menu');
+
+var _Menu2 = _interopRequireDefault(_Menu);
+
+var _Button = require('@material-ui/core/Button');
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _Divider = require('@material-ui/core/Divider');
+
+var _Divider2 = _interopRequireDefault(_Divider);
+
+var _d2I18n = require('@dhis2/d2-i18n');
+
+var _d2I18n2 = _interopRequireDefault(_d2I18n);
+
+var _NewMenuItem = require('./NewMenuItem');
+
+var _NewMenuItem2 = _interopRequireDefault(_NewMenuItem);
+
+var _OpenMenuItem = require('./OpenMenuItem');
+
+var _OpenMenuItem2 = _interopRequireDefault(_OpenMenuItem);
+
+var _SaveMenuItem = require('./SaveMenuItem');
+
+var _SaveMenuItem2 = _interopRequireDefault(_SaveMenuItem);
+
+var _SaveAsMenuItem = require('./SaveAsMenuItem');
+
+var _SaveAsMenuItem2 = _interopRequireDefault(_SaveAsMenuItem);
+
+var _RenameMenuItem = require('./RenameMenuItem');
+
+var _RenameMenuItem2 = _interopRequireDefault(_RenameMenuItem);
+
+var _TranslateMenuItem = require('./TranslateMenuItem');
+
+var _TranslateMenuItem2 = _interopRequireDefault(_TranslateMenuItem);
+
+var _ShareMenuItem = require('./ShareMenuItem');
+
+var _ShareMenuItem2 = _interopRequireDefault(_ShareMenuItem);
+
+var _GetLinkMenuItem = require('./GetLinkMenuItem');
+
+var _GetLinkMenuItem2 = _interopRequireDefault(_GetLinkMenuItem);
+
+var _DeleteMenuItem = require('./DeleteMenuItem');
+
+var _DeleteMenuItem2 = _interopRequireDefault(_DeleteMenuItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var FileMenu = exports.FileMenu = function (_Component) {
+    (0, _inherits3.default)(FileMenu, _Component);
 
     function FileMenu(props) {
         var _this2 = this;
 
-        _classCallCheck(this, FileMenu);
+        (0, _classCallCheck3.default)(this, FileMenu);
 
-        var _this = _possibleConstructorReturn(this, (FileMenu.__proto__ || _Object$getPrototypeOf(FileMenu)).call(this, props));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (FileMenu.__proto__ || (0, _getPrototypeOf2.default)(FileMenu)).call(this, props));
 
         _this.getChildContext = function () {
             return {
@@ -107,9 +179,9 @@ export var FileMenu = function (_Component) {
         };
 
         _this.setFileModel = function () {
-            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(id) {
+            var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(id) {
                 var model;
-                return _regeneratorRuntime.wrap(function _callee$(_context) {
+                return _regenerator2.default.wrap(function _callee$(_context) {
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
@@ -161,7 +233,7 @@ export var FileMenu = function (_Component) {
         return _this;
     }
 
-    _createClass(FileMenu, [{
+    (0, _createClass3.default)(FileMenu, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -174,16 +246,16 @@ export var FileMenu = function (_Component) {
                 onError = _props.onError;
 
 
-            return React.createElement(
-                Fragment,
+            return _react2.default.createElement(
+                _react.Fragment,
                 null,
-                React.createElement(
-                    Button,
+                _react2.default.createElement(
+                    _Button2.default,
                     { className: classes.menuButton, onClick: this.toggleMenu },
-                    i18n.t('File')
+                    _d2I18n2.default.t('File')
                 ),
-                React.createElement(
-                    Menu,
+                _react2.default.createElement(
+                    _Menu2.default,
                     {
                         disableEnforceFocus: true,
                         open: this.state.menuIsOpen,
@@ -192,9 +264,9 @@ export var FileMenu = function (_Component) {
                         anchorOrigin: { vertical: 'bottom', horizontal: 'left' },
                         getContentAnchorEl: null
                     },
-                    React.createElement(NewMenuItem, { enabled: true, onNew: this.onNew }),
-                    React.createElement(Divider, { light: true }),
-                    React.createElement(OpenMenuItem, {
+                    _react2.default.createElement(_NewMenuItem2.default, { enabled: true, onNew: this.onNew }),
+                    _react2.default.createElement(_Divider2.default, { light: true }),
+                    _react2.default.createElement(_OpenMenuItem2.default, {
                         enabled: true,
                         fileType: fileType,
                         refreshDialogData: this.state.refreshDialogData,
@@ -203,8 +275,8 @@ export var FileMenu = function (_Component) {
                         onRename: this.onRename,
                         onDelete: this.onDelete
                     }),
-                    React.createElement(Divider, null),
-                    React.createElement(SaveMenuItem, {
+                    _react2.default.createElement(_Divider2.default, null),
+                    _react2.default.createElement(_SaveMenuItem2.default, {
                         enabled: Boolean(!this.state.fileModel || this.state.fileModel && this.state.fileModel.access.update),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
@@ -212,15 +284,15 @@ export var FileMenu = function (_Component) {
                         onSaveAs: this.onAction(onSaveAs, true),
                         onClose: this.onAction()
                     }),
-                    React.createElement(SaveAsMenuItem, {
+                    _react2.default.createElement(_SaveAsMenuItem2.default, {
                         enabled: Boolean(this.state.fileModel),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
                         onSaveAs: this.onAction(onSaveAs, true),
                         onClose: this.onAction()
                     }),
-                    React.createElement(Divider, null),
-                    React.createElement(RenameMenuItem, {
+                    _react2.default.createElement(_Divider2.default, null),
+                    _react2.default.createElement(_RenameMenuItem2.default, {
                         enabled: Boolean(this.state.fileModel && this.state.fileModel.access.update),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
@@ -228,29 +300,29 @@ export var FileMenu = function (_Component) {
                         onRenameError: this.onAction(onError),
                         onClose: this.onAction()
                     }),
-                    React.createElement(TranslateMenuItem, {
+                    _react2.default.createElement(_TranslateMenuItem2.default, {
                         enabled: Boolean(this.state.fileModel && this.state.fileModel.access.update),
                         fileModel: this.state.fileModel,
                         onTranslate: this.onAction(onTranslate),
                         onTranslateError: this.onAction(onError),
                         onClose: this.onAction()
                     }),
-                    React.createElement(Divider, null),
-                    React.createElement(ShareMenuItem, {
+                    _react2.default.createElement(_Divider2.default, null),
+                    _react2.default.createElement(_ShareMenuItem2.default, {
                         enabled: Boolean(this.state.fileModel && this.state.fileModel.access.manage),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
                         onShare: this.onAction(onShare),
                         onClose: this.onAction()
                     }),
-                    React.createElement(GetLinkMenuItem, {
+                    _react2.default.createElement(_GetLinkMenuItem2.default, {
                         enabled: Boolean(this.state.fileModel),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
                         onClose: this.onAction()
                     }),
-                    React.createElement(Divider, null),
-                    React.createElement(DeleteMenuItem, {
+                    _react2.default.createElement(_Divider2.default, null),
+                    _react2.default.createElement(_DeleteMenuItem2.default, {
                         enabled: Boolean(this.state.fileModel && this.state.fileModel.access.delete),
                         fileType: fileType,
                         fileModel: this.state.fileModel,
@@ -262,12 +334,11 @@ export var FileMenu = function (_Component) {
             );
         }
     }]);
-
     return FileMenu;
-}(Component);
+}(_react.Component);
 
 FileMenu.childContextTypes = {
-    d2: PropTypes.object
+    d2: _propTypes2.default.object
 };
 
 FileMenu.defaultProps = {
@@ -286,18 +357,18 @@ FileMenu.defaultProps = {
 };
 
 FileMenu.propTypes = {
-    d2: PropTypes.object,
-    fileType: PropTypes.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
-    fileId: PropTypes.string,
-    onNew: PropTypes.func,
-    onOpen: PropTypes.func,
-    onSave: PropTypes.func,
-    onSaveAs: PropTypes.func,
-    onRename: PropTypes.func,
-    onTranslate: PropTypes.func,
-    onShare: PropTypes.func,
-    onDelete: PropTypes.func,
-    onError: PropTypes.func
+    d2: _propTypes2.default.object,
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileId: _propTypes2.default.string,
+    onNew: _propTypes2.default.func,
+    onOpen: _propTypes2.default.func,
+    onSave: _propTypes2.default.func,
+    onSaveAs: _propTypes2.default.func,
+    onRename: _propTypes2.default.func,
+    onTranslate: _propTypes2.default.func,
+    onShare: _propTypes2.default.func,
+    onDelete: _propTypes2.default.func,
+    onError: _propTypes2.default.func
 };
 
 var styles = function styles(theme) {
@@ -310,4 +381,4 @@ var styles = function styles(theme) {
     };
 };
 
-export default withStyles(styles)(FileMenu);
+exports.default = (0, _styles.withStyles)(styles)(FileMenu);

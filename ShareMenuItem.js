@@ -1,26 +1,70 @@
-import _Object$getPrototypeOf from 'babel-runtime/core-js/object/get-prototype-of';
-import _classCallCheck from 'babel-runtime/helpers/classCallCheck';
-import _createClass from 'babel-runtime/helpers/createClass';
-import _possibleConstructorReturn from 'babel-runtime/helpers/possibleConstructorReturn';
-import _inherits from 'babel-runtime/helpers/inherits';
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+'use strict';
 
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MenuItem from '@material-ui/core/MenuItem';
-import Share from '@material-ui/icons/Share';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-import i18n from '@dhis2/d2-i18n';
-import SharingDialog from '@dhis2/d2-ui-sharing-dialog';
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _ListItemIcon = require('@material-ui/core/ListItemIcon');
+
+var _ListItemIcon2 = _interopRequireDefault(_ListItemIcon);
+
+var _ListItemText = require('@material-ui/core/ListItemText');
+
+var _ListItemText2 = _interopRequireDefault(_ListItemText);
+
+var _MenuItem = require('@material-ui/core/MenuItem');
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+var _Share = require('@material-ui/icons/Share');
+
+var _Share2 = _interopRequireDefault(_Share);
+
+var _d2I18n = require('@dhis2/d2-i18n');
+
+var _d2I18n2 = _interopRequireDefault(_d2I18n);
+
+var _d2UiSharingDialog = require('@dhis2/d2-ui-sharing-dialog');
+
+var _d2UiSharingDialog2 = _interopRequireDefault(_d2UiSharingDialog);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ShareMenuItem = function (_Component) {
-    _inherits(ShareMenuItem, _Component);
+    (0, _inherits3.default)(ShareMenuItem, _Component);
 
     function ShareMenuItem(props) {
-        _classCallCheck(this, ShareMenuItem);
+        (0, _classCallCheck3.default)(this, ShareMenuItem);
 
-        var _this = _possibleConstructorReturn(this, (ShareMenuItem.__proto__ || _Object$getPrototypeOf(ShareMenuItem)).call(this, props));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (ShareMenuItem.__proto__ || (0, _getPrototypeOf2.default)(ShareMenuItem)).call(this, props));
 
         _this.onClose = function () {
             _this.toggleSharingDialog();
@@ -48,7 +92,7 @@ var ShareMenuItem = function (_Component) {
         return _this;
     }
 
-    _createClass(ShareMenuItem, [{
+    (0, _createClass3.default)(ShareMenuItem, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -57,20 +101,20 @@ var ShareMenuItem = function (_Component) {
                 fileType = _props.fileType;
 
 
-            return React.createElement(
-                Fragment,
+            return _react2.default.createElement(
+                _react.Fragment,
                 null,
-                React.createElement(
-                    MenuItem,
+                _react2.default.createElement(
+                    _MenuItem2.default,
                     { disabled: !enabled, onClick: this.toggleSharingDialog },
-                    React.createElement(
-                        ListItemIcon,
+                    _react2.default.createElement(
+                        _ListItemIcon2.default,
                         null,
-                        React.createElement(Share, null)
+                        _react2.default.createElement(_Share2.default, null)
                     ),
-                    React.createElement(ListItemText, { primary: i18n.t('Share') })
+                    _react2.default.createElement(_ListItemText2.default, { primary: _d2I18n2.default.t('Share') })
                 ),
-                fileModel ? React.createElement(SharingDialog, {
+                fileModel ? _react2.default.createElement(_d2UiSharingDialog2.default, {
                     open: this.state.dialogIsOpen,
                     onRequestClose: this.onShare,
                     d2: this.context.d2,
@@ -80,12 +124,11 @@ var ShareMenuItem = function (_Component) {
             );
         }
     }]);
-
     return ShareMenuItem;
-}(Component);
+}(_react.Component);
 
 ShareMenuItem.contextTypes = {
-    d2: PropTypes.object
+    d2: _propTypes2.default.object
 };
 
 ShareMenuItem.defaultProps = {
@@ -97,11 +140,11 @@ ShareMenuItem.defaultProps = {
 };
 
 ShareMenuItem.propTypes = {
-    enabled: PropTypes.bool,
-    fileType: PropTypes.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
-    fileModel: PropTypes.object,
-    onShare: PropTypes.func,
-    onClose: PropTypes.func
+    enabled: _propTypes2.default.bool,
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileModel: _propTypes2.default.object,
+    onShare: _propTypes2.default.func,
+    onClose: _propTypes2.default.func
 };
 
-export default ShareMenuItem;
+exports.default = ShareMenuItem;
