@@ -1,33 +1,92 @@
-import _regeneratorRuntime from 'babel-runtime/regenerator';
-import _asyncToGenerator from 'babel-runtime/helpers/asyncToGenerator';
-import _defineProperty from 'babel-runtime/helpers/defineProperty';
-import _Object$getPrototypeOf from 'babel-runtime/core-js/object/get-prototype-of';
-import _classCallCheck from 'babel-runtime/helpers/classCallCheck';
-import _createClass from 'babel-runtime/helpers/createClass';
-import _possibleConstructorReturn from 'babel-runtime/helpers/possibleConstructorReturn';
-import _inherits from 'babel-runtime/helpers/inherits';
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+'use strict';
 
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-import i18n from '@dhis2/d2-i18n';
+var _regenerator = require('babel-runtime/regenerator');
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
+var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
+
+var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+
+var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
+
+var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Dialog = require('@material-ui/core/Dialog');
+
+var _Dialog2 = _interopRequireDefault(_Dialog);
+
+var _DialogActions = require('@material-ui/core/DialogActions');
+
+var _DialogActions2 = _interopRequireDefault(_DialogActions);
+
+var _DialogContent = require('@material-ui/core/DialogContent');
+
+var _DialogContent2 = _interopRequireDefault(_DialogContent);
+
+var _DialogTitle = require('@material-ui/core/DialogTitle');
+
+var _DialogTitle2 = _interopRequireDefault(_DialogTitle);
+
+var _Button = require('@material-ui/core/Button');
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _TextField = require('@material-ui/core/TextField');
+
+var _TextField2 = _interopRequireDefault(_TextField);
+
+var _FormControl = require('@material-ui/core/FormControl');
+
+var _FormControl2 = _interopRequireDefault(_FormControl);
+
+var _d2I18n = require('@dhis2/d2-i18n');
+
+var _d2I18n2 = _interopRequireDefault(_d2I18n);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var WriteInterpretationDialog = function (_Component) {
-    _inherits(WriteInterpretationDialog, _Component);
+    (0, _inherits3.default)(WriteInterpretationDialog, _Component);
 
     function WriteInterpretationDialog(props) {
         var _this2 = this;
 
-        _classCallCheck(this, WriteInterpretationDialog);
+        (0, _classCallCheck3.default)(this, WriteInterpretationDialog);
 
-        var _this = _possibleConstructorReturn(this, (WriteInterpretationDialog.__proto__ || _Object$getPrototypeOf(WriteInterpretationDialog)).call(this, props));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (WriteInterpretationDialog.__proto__ || (0, _getPrototypeOf2.default)(WriteInterpretationDialog)).call(this, props));
 
         _this.onRequestClose = function () {
             // reset form so when the dialog is reopened is consistent
@@ -41,15 +100,15 @@ var WriteInterpretationDialog = function (_Component) {
             return function (event) {
                 event.preventDefault();
 
-                _this.setState(_defineProperty({}, field, event.target.value));
+                _this.setState((0, _defineProperty3.default)({}, field, event.target.value));
             };
         };
 
         _this.handleSubmit = function () {
-            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(event) {
+            var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(event) {
                 var _this$props, fileType, fileModel, onRequestWriteInterpretation, onRequestWriteInterpretationError, form, url, headers;
 
-                return _regeneratorRuntime.wrap(function _callee$(_context) {
+                return _regenerator2.default.wrap(function _callee$(_context) {
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
@@ -102,30 +161,30 @@ var WriteInterpretationDialog = function (_Component) {
         return _this;
     }
 
-    _createClass(WriteInterpretationDialog, [{
+    (0, _createClass3.default)(WriteInterpretationDialog, [{
         key: 'render',
         value: function render() {
             var open = this.props.open;
 
 
-            return React.createElement(
-                Dialog,
+            return _react2.default.createElement(
+                _Dialog2.default,
                 { open: open, onClose: this.onRequestClose, maxWidth: 'md' },
-                React.createElement(
+                _react2.default.createElement(
                     'form',
                     { onSubmit: this.handleSubmit },
-                    React.createElement(
-                        DialogTitle,
+                    _react2.default.createElement(
+                        _DialogTitle2.default,
                         null,
-                        i18n.t('Write interpretation')
+                        _d2I18n2.default.t('Write interpretation')
                     ),
-                    React.createElement(
-                        DialogContent,
+                    _react2.default.createElement(
+                        _DialogContent2.default,
                         null,
-                        React.createElement(
-                            FormControl,
+                        _react2.default.createElement(
+                            _FormControl2.default,
                             { fullWidth: true },
-                            React.createElement(TextField, {
+                            _react2.default.createElement(_TextField2.default, {
                                 value: this.state.interpretationText,
                                 required: true,
                                 margin: 'normal',
@@ -135,30 +194,29 @@ var WriteInterpretationDialog = function (_Component) {
                             })
                         )
                     ),
-                    React.createElement(
-                        DialogActions,
+                    _react2.default.createElement(
+                        _DialogActions2.default,
                         null,
-                        React.createElement(
-                            Button,
+                        _react2.default.createElement(
+                            _Button2.default,
                             { onClick: this.onRequestClose, color: 'primary' },
-                            i18n.t('Cancel')
+                            _d2I18n2.default.t('Cancel')
                         ),
-                        React.createElement(
-                            Button,
+                        _react2.default.createElement(
+                            _Button2.default,
                             { type: 'submit', onClick: this.handleSubmit, color: 'primary' },
-                            i18n.t('Post')
+                            _d2I18n2.default.t('Post')
                         )
                     )
                 )
             );
         }
     }]);
-
     return WriteInterpretationDialog;
-}(Component);
+}(_react.Component);
 
 WriteInterpretationDialog.contextTypes = {
-    d2: PropTypes.object
+    d2: _propTypes2.default.object
 };
 
 WriteInterpretationDialog.defaultProps = {
@@ -171,12 +229,12 @@ WriteInterpretationDialog.defaultProps = {
 };
 
 WriteInterpretationDialog.propTypes = {
-    open: PropTypes.bool,
-    fileType: PropTypes.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
-    fileModel: PropTypes.object,
-    onRequestClose: PropTypes.func,
-    onRequestWriteInterpretation: PropTypes.func,
-    onRequestWriteInterpretationError: PropTypes.func
+    open: _propTypes2.default.bool,
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileModel: _propTypes2.default.object,
+    onRequestClose: _propTypes2.default.func,
+    onRequestWriteInterpretation: _propTypes2.default.func,
+    onRequestWriteInterpretationError: _propTypes2.default.func
 };
 
-export default WriteInterpretationDialog;
+exports.default = WriteInterpretationDialog;

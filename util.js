@@ -1,4 +1,9 @@
-export var getFileTypeLabel = function getFileTypeLabel(fileType) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var getFileTypeLabel = exports.getFileTypeLabel = function getFileTypeLabel(fileType) {
     switch (fileType) {
         case 'chart':
             return 'chart';

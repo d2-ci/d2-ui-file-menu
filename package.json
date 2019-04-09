@@ -12,7 +12,7 @@
   },
   "scripts": {
     "prebuild": "npm run lint && rimraf ./build/*",
-    "build": "npm run localize && cross-env BABEL_ENV=es babel src --out-dir build --ignore spec.js",
+    "build": "npm run localize && babel src --copy-files --out-dir build --ignore spec.js",
     "lint": "eslint src/",
     "watch": "npm run build -- --watch",
     "test-ci": "jest --config=../../jest.config.js packages/file-menu",
@@ -22,9 +22,9 @@
   },
   "dependencies": {
     "@dhis2/d2-i18n": "^1.0.3",
-    "@dhis2/d2-ui-favorites-dialog": "5.1.0",
-    "@dhis2/d2-ui-sharing-dialog": "5.1.0",
-    "@dhis2/d2-ui-translation-dialog": "5.1.0",
+    "@dhis2/d2-ui-favorites-dialog": "5.3.1",
+    "@dhis2/d2-ui-sharing-dialog": "5.3.1",
+    "@dhis2/d2-ui-translation-dialog": "5.3.1",
     "@material-ui/core": "^3.3.1",
     "@material-ui/icons": "^3.0.1",
     "prop-types": "^15.6.0"
@@ -48,6 +48,6 @@
     "husky": "^1.0.0-rc.4",
     "prettier": "^1.12.1"
   },
-  "version": "5.1.0",
+  "version": "5.3.1",
   "private": false
 }

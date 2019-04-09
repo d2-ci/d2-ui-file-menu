@@ -1,25 +1,51 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+'use strict';
 
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MenuItem from '@material-ui/core/MenuItem';
-import AddBox from '@material-ui/icons/AddBox';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-import i18n from '@dhis2/d2-i18n';
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _ListItemIcon = require('@material-ui/core/ListItemIcon');
+
+var _ListItemIcon2 = _interopRequireDefault(_ListItemIcon);
+
+var _ListItemText = require('@material-ui/core/ListItemText');
+
+var _ListItemText2 = _interopRequireDefault(_ListItemText);
+
+var _MenuItem = require('@material-ui/core/MenuItem');
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+var _AddBox = require('@material-ui/icons/AddBox');
+
+var _AddBox2 = _interopRequireDefault(_AddBox);
+
+var _d2I18n = require('@dhis2/d2-i18n');
+
+var _d2I18n2 = _interopRequireDefault(_d2I18n);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var NewMenuItem = function NewMenuItem(_ref) {
     var enabled = _ref.enabled,
         onNew = _ref.onNew;
-    return React.createElement(
-        MenuItem,
+    return _react2.default.createElement(
+        _MenuItem2.default,
         { disabled: !enabled, onClick: onNew },
-        React.createElement(
-            ListItemIcon,
+        _react2.default.createElement(
+            _ListItemIcon2.default,
             null,
-            React.createElement(AddBox, null)
+            _react2.default.createElement(_AddBox2.default, null)
         ),
-        React.createElement(ListItemText, { primary: i18n.t('New') })
+        _react2.default.createElement(_ListItemText2.default, { primary: _d2I18n2.default.t('New') })
     );
 };
 
@@ -29,8 +55,8 @@ NewMenuItem.defaultProps = {
 };
 
 NewMenuItem.propTypes = {
-    enabled: PropTypes.bool,
-    onNew: PropTypes.func
+    enabled: _propTypes2.default.bool,
+    onNew: _propTypes2.default.func
 };
 
-export default NewMenuItem;
+exports.default = NewMenuItem;

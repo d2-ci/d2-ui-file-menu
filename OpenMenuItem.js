@@ -1,26 +1,70 @@
-import _Object$getPrototypeOf from 'babel-runtime/core-js/object/get-prototype-of';
-import _classCallCheck from 'babel-runtime/helpers/classCallCheck';
-import _createClass from 'babel-runtime/helpers/createClass';
-import _possibleConstructorReturn from 'babel-runtime/helpers/possibleConstructorReturn';
-import _inherits from 'babel-runtime/helpers/inherits';
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+'use strict';
 
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MenuItem from '@material-ui/core/MenuItem';
-import OpenInBrowser from '@material-ui/icons/OpenInBrowser';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-import i18n from '@dhis2/d2-i18n';
-import FavoritesDialog from '@dhis2/d2-ui-favorites-dialog';
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _ListItemIcon = require('@material-ui/core/ListItemIcon');
+
+var _ListItemIcon2 = _interopRequireDefault(_ListItemIcon);
+
+var _ListItemText = require('@material-ui/core/ListItemText');
+
+var _ListItemText2 = _interopRequireDefault(_ListItemText);
+
+var _MenuItem = require('@material-ui/core/MenuItem');
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+var _OpenInBrowser = require('@material-ui/icons/OpenInBrowser');
+
+var _OpenInBrowser2 = _interopRequireDefault(_OpenInBrowser);
+
+var _d2I18n = require('@dhis2/d2-i18n');
+
+var _d2I18n2 = _interopRequireDefault(_d2I18n);
+
+var _d2UiFavoritesDialog = require('@dhis2/d2-ui-favorites-dialog');
+
+var _d2UiFavoritesDialog2 = _interopRequireDefault(_d2UiFavoritesDialog);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var OpenMenuItem = function (_Component) {
-    _inherits(OpenMenuItem, _Component);
+    (0, _inherits3.default)(OpenMenuItem, _Component);
 
     function OpenMenuItem(props) {
-        _classCallCheck(this, OpenMenuItem);
+        (0, _classCallCheck3.default)(this, OpenMenuItem);
 
-        var _this = _possibleConstructorReturn(this, (OpenMenuItem.__proto__ || _Object$getPrototypeOf(OpenMenuItem)).call(this, props));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (OpenMenuItem.__proto__ || (0, _getPrototypeOf2.default)(OpenMenuItem)).call(this, props));
 
         _this.onClose = function () {
             _this.toggleFavoritesDialog();
@@ -44,7 +88,7 @@ var OpenMenuItem = function (_Component) {
         return _this;
     }
 
-    _createClass(OpenMenuItem, [{
+    (0, _createClass3.default)(OpenMenuItem, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -54,20 +98,20 @@ var OpenMenuItem = function (_Component) {
                 onDelete = _props.onDelete;
 
 
-            return React.createElement(
-                Fragment,
+            return _react2.default.createElement(
+                _react.Fragment,
                 null,
-                React.createElement(
-                    MenuItem,
+                _react2.default.createElement(
+                    _MenuItem2.default,
                     { button: true, onClick: this.toggleFavoritesDialog },
-                    React.createElement(
-                        ListItemIcon,
+                    _react2.default.createElement(
+                        _ListItemIcon2.default,
                         null,
-                        React.createElement(OpenInBrowser, null)
+                        _react2.default.createElement(_OpenInBrowser2.default, null)
                     ),
-                    React.createElement(ListItemText, { primary: i18n.t('Open') })
+                    _react2.default.createElement(_ListItemText2.default, { primary: _d2I18n2.default.t('Open') })
                 ),
-                React.createElement(FavoritesDialog, {
+                _react2.default.createElement(_d2UiFavoritesDialog2.default, {
                     open: this.state.dialogIsOpen,
                     refreshData: refreshDialogData,
                     type: fileType,
@@ -80,12 +124,11 @@ var OpenMenuItem = function (_Component) {
             );
         }
     }]);
-
     return OpenMenuItem;
-}(Component);
+}(_react.Component);
 
 OpenMenuItem.contextTypes = {
-    d2: PropTypes.object
+    d2: _propTypes2.default.object
 };
 
 OpenMenuItem.defaultProps = {
@@ -98,12 +141,12 @@ OpenMenuItem.defaultProps = {
 };
 
 OpenMenuItem.propTypes = {
-    fileType: PropTypes.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
-    refreshDialogData: PropTypes.bool,
-    onOpen: PropTypes.func,
-    onClose: PropTypes.func,
-    onRename: PropTypes.func,
-    onDelete: PropTypes.func
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    refreshDialogData: _propTypes2.default.bool,
+    onOpen: _propTypes2.default.func,
+    onClose: _propTypes2.default.func,
+    onRename: _propTypes2.default.func,
+    onDelete: _propTypes2.default.func
 };
 
-export default OpenMenuItem;
+exports.default = OpenMenuItem;
