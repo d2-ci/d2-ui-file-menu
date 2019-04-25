@@ -42,10 +42,12 @@ var getAppUrl = function getAppUrl(fileType, fileId, context) {
     var baseUrl = context.d2.Api.getApi().baseUrl.split('/api', 1)[0];
 
     var appName = void 0;
+    var appUrl = void 0;
 
     switch (fileType) {
         case 'chart':
             appName = 'dhis-web-data-visualizer';
+            appUrl = 'dhis-web-data-visualizer/#/' + fileId;
             break;
         case 'reportTable':
             appName = 'dhis-web-pivot';
@@ -64,7 +66,7 @@ var getAppUrl = function getAppUrl(fileType, fileId, context) {
     }
 
     // DHIS2-4253: force URL to be absolute
-    var url = new URL(baseUrl + '/' + appName + '/index.html?id=' + fileId, '' + window.location.origin + window.location.pathname);
+    var url = new URL(appUrl ? baseUrl + '/' + appUrl : baseUrl + '/' + appName + '/index.html?id=' + fileId, '' + window.location.origin + window.location.pathname);
 
     return url.href;
 };
@@ -101,8 +103,7 @@ var GetLinkDialog = function GetLinkDialog(props, context) {
                 _react2.default.createElement(
                     'a',
                     { href: fileModel.href + '/data.html+css' },
-                    fileModel.href,
-                    '/data.html+css'
+                    fileModel.href + '/data.html+css'
                 )
             )
         ),
