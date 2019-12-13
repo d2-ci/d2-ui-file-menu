@@ -284,7 +284,7 @@ RenameDialog.defaultProps = {
 
 RenameDialog.propTypes = {
     open: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
+    fileType: _propTypes2.default.oneOf(_util.supportedFileTypes),
     fileModel: _propTypes2.default.object,
     onRequestClose: _propTypes2.default.func,
     onRequestRename: _propTypes2.default.func,

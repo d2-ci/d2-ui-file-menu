@@ -56,6 +56,8 @@ var _WriteInterpretationDialog = require('./WriteInterpretationDialog');
 
 var _WriteInterpretationDialog2 = _interopRequireDefault(_WriteInterpretationDialog);
 
+var _util = require('./util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var WriteInterpretationMenuItem = function (_Component) {
@@ -155,7 +157,7 @@ WriteInterpretationMenuItem.defaultProps = {
 
 WriteInterpretationMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
+    fileType: _propTypes2.default.oneOf(_util.supportedFileTypes),
     fileModel: _propTypes2.default.object,
     onWriteInterpretation: _propTypes2.default.func,
     onWriteInterpretationError: _propTypes2.default.func,

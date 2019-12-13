@@ -56,6 +56,8 @@ var _d2UiSharingDialog = require('@dhis2/d2-ui-sharing-dialog');
 
 var _d2UiSharingDialog2 = _interopRequireDefault(_d2UiSharingDialog);
 
+var _util = require('./util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ShareMenuItem = function (_Component) {
@@ -144,7 +146,7 @@ ShareMenuItem.defaultProps = {
 
 ShareMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
+    fileType: _propTypes2.default.oneOf(_util.supportedFileTypes),
     fileModel: _propTypes2.default.object,
     onShare: _propTypes2.default.func,
     onClose: _propTypes2.default.func
