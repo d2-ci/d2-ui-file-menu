@@ -141,7 +141,7 @@ OpenMenuItem.defaultProps = {
 };
 
 OpenMenuItem.propTypes = {
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     refreshDialogData: _propTypes2.default.bool,
     onOpen: _propTypes2.default.func,
     onClose: _propTypes2.default.func,

@@ -98,7 +98,10 @@ var GetLinkMenuItem = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _MenuItem2.default,
-                    { disabled: !enabled, onClick: this.toggleGetLinkDialog },
+                    {
+                        disabled: !enabled,
+                        onClick: this.toggleGetLinkDialog
+                    },
                     _react2.default.createElement(
                         _ListItemIcon2.default,
                         null,
@@ -131,7 +134,7 @@ GetLinkMenuItem.defaultProps = {
 
 GetLinkMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     fileModel: _propTypes2.default.object,
     onClose: _propTypes2.default.func
 };

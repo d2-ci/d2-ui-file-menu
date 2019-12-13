@@ -251,7 +251,10 @@ var FileMenu = exports.FileMenu = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _Button2.default,
-                    { className: classes.menuButton, onClick: this.toggleMenu },
+                    {
+                        className: classes.menuButton,
+                        onClick: this.toggleMenu
+                    },
                     _d2I18n2.default.t('File')
                 ),
                 _react2.default.createElement(
@@ -358,7 +361,7 @@ FileMenu.defaultProps = {
 
 FileMenu.propTypes = {
     d2: _propTypes2.default.object,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     fileId: _propTypes2.default.string,
     onNew: _propTypes2.default.func,
     onOpen: _propTypes2.default.func,

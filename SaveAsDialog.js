@@ -136,7 +136,9 @@ var SaveAsDialog = function (_Component) {
                 _react2.default.createElement(
                     _DialogTitle2.default,
                     null,
-                    _d2I18n2.default.t('Save {{what}} as', { what: (0, _util.getFileTypeLabel)(fileType) })
+                    _d2I18n2.default.t('Save {{what}} as', {
+                        what: (0, _util.getFileTypeLabel)(fileType)
+                    })
                 ),
                 _react2.default.createElement(
                     _DialogContent2.default,
@@ -179,7 +181,11 @@ var SaveAsDialog = function (_Component) {
                     ),
                     _react2.default.createElement(
                         _Button2.default,
-                        { type: 'submit', onClick: this.handleSubmit, color: 'primary' },
+                        {
+                            type: 'submit',
+                            onClick: this.handleSubmit,
+                            color: 'primary'
+                        },
                         _d2I18n2.default.t('Save')
                     )
                 )
@@ -203,7 +209,7 @@ SaveAsDialog.defaultProps = {
 
 SaveAsDialog.propTypes = {
     open: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     fileModel: _propTypes2.default.object,
     onRequestClose: _propTypes2.default.func,
     onRequestSaveAs: _propTypes2.default.func

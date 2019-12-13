@@ -67,7 +67,9 @@ var DeleteDialog = function DeleteDialog(props) {
         _react2.default.createElement(
             _DialogTitle2.default,
             null,
-            _d2I18n2.default.t('Delete {{what}}', { what: (0, _util.getFileTypeLabel)(fileType) })
+            _d2I18n2.default.t('Delete {{what}}', {
+                what: (0, _util.getFileTypeLabel)(fileType)
+            })
         ),
         _react2.default.createElement(
             _DialogContent2.default,
@@ -108,7 +110,7 @@ DeleteDialog.defaultProps = {
 
 DeleteDialog.propTypes = {
     open: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     fileModel: _propTypes2.default.object,
     onRequestClose: _propTypes2.default.func,
     onRequestDelete: _propTypes2.default.func,

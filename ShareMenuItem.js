@@ -106,7 +106,10 @@ var ShareMenuItem = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _MenuItem2.default,
-                    { disabled: !enabled, onClick: this.toggleSharingDialog },
+                    {
+                        disabled: !enabled,
+                        onClick: this.toggleSharingDialog
+                    },
                     _react2.default.createElement(
                         _ListItemIcon2.default,
                         null,
@@ -141,7 +144,7 @@ ShareMenuItem.defaultProps = {
 
 ShareMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     fileModel: _propTypes2.default.object,
     onShare: _propTypes2.default.func,
     onClose: _propTypes2.default.func

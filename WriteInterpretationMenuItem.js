@@ -115,7 +115,10 @@ var WriteInterpretationMenuItem = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _MenuItem2.default,
-                    { disabled: !enabled, onClick: this.toggleWriteInterpretationDialog },
+                    {
+                        disabled: !enabled,
+                        onClick: this.toggleWriteInterpretationDialog
+                    },
                     _react2.default.createElement(
                         _ListItemIcon2.default,
                         null,
@@ -152,7 +155,7 @@ WriteInterpretationMenuItem.defaultProps = {
 
 WriteInterpretationMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     fileModel: _propTypes2.default.object,
     onWriteInterpretation: _propTypes2.default.func,
     onWriteInterpretationError: _propTypes2.default.func,

@@ -146,7 +146,7 @@ DeleteMenuItem.defaultProps = {
 
 DeleteMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
     fileModel: _propTypes2.default.object,
     onDelete: _propTypes2.default.func,
     onDeleteError: _propTypes2.default.func,
