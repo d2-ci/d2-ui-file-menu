@@ -56,6 +56,8 @@ var _RenameDialog = require('./RenameDialog');
 
 var _RenameDialog2 = _interopRequireDefault(_RenameDialog);
 
+var _util = require('./util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var RenameMenuItem = function (_Component) {
@@ -152,7 +154,7 @@ RenameMenuItem.defaultProps = {
 
 RenameMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
+    fileType: _propTypes2.default.oneOf(_util.supportedFileTypes),
     fileModel: _propTypes2.default.object,
     onRename: _propTypes2.default.func,
     onRenameError: _propTypes2.default.func,

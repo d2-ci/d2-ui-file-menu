@@ -36,6 +36,8 @@ var _d2I18n = require('@dhis2/d2-i18n');
 
 var _d2I18n2 = _interopRequireDefault(_d2I18n);
 
+var _util = require('./util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var getAppUrl = function getAppUrl(fileType, fileId, context) {
@@ -132,7 +134,7 @@ GetLinkDialog.defaultProps = {
 
 GetLinkDialog.propTypes = {
     open: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map', 'visualization']),
+    fileType: _propTypes2.default.oneOf(_util.supportedFileTypes),
     fileModel: _propTypes2.default.object,
     onRequestClose: _propTypes2.default.func
 };
