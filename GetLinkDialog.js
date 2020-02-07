@@ -97,17 +97,6 @@ var GetLinkDialog = function GetLinkDialog(props, context) {
                     { href: getAppUrl(fileType, fileModel.id, context) },
                     getAppUrl(fileType, fileModel.id, context)
                 )
-            ),
-            fileType !== 'map' && _react2.default.createElement(
-                _DialogContentText2.default,
-                null,
-                _d2I18n2.default.t('Open in web API'),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                    'a',
-                    { href: fileModel.href + '/data.html+css' },
-                    fileModel.href + '/data.html+css'
-                )
             )
         ),
         _react2.default.createElement(
