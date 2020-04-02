@@ -116,6 +116,10 @@ var _translations41 = require('./zh/translations.json');
 
 var _translations42 = _interopRequireDefault(_translations41);
 
+var _translations43 = require('./zh_CN/translations.json');
+
+var _translations44 = _interopRequireDefault(_translations43);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var namespace = 'd2-ui-file-menu'; //------------------------------------------------------------------------------
@@ -150,6 +154,7 @@ _d2I18n2.default.addResources('uk', namespace, _translations36.default);
 _d2I18n2.default.addResources('ur', namespace, _translations38.default);
 _d2I18n2.default.addResources('vi', namespace, _translations40.default);
 _d2I18n2.default.addResources('zh', namespace, _translations42.default);
+_d2I18n2.default.addResources('zh_CN', namespace, _translations44.default);
 
 _d2I18n2.default.setDefaultNamespace(namespace);
 _d2I18n2.default.changeLanguage('en');
