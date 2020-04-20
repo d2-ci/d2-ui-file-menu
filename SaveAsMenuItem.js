@@ -56,6 +56,8 @@ var _SaveAsDialog = require('./SaveAsDialog');
 
 var _SaveAsDialog2 = _interopRequireDefault(_SaveAsDialog);
 
+var _util = require('./util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SaveAsMenuItem = function (_Component) {
@@ -106,7 +108,11 @@ var SaveAsMenuItem = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _MenuItem2.default,
-                    { button: true, onClick: this.toggleSaveAsDialog, disabled: !enabled },
+                    {
+                        button: true,
+                        onClick: this.toggleSaveAsDialog,
+                        disabled: !enabled
+                    },
                     _react2.default.createElement(
                         _ListItemIcon2.default,
                         null,
@@ -137,7 +143,7 @@ SaveAsMenuItem.defaultProps = {
 
 SaveAsMenuItem.propTypes = {
     enabled: _propTypes2.default.bool,
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(_util.supportedFileTypes),
     fileModel: _propTypes2.default.object,
     onSaveAs: _propTypes2.default.func,
     onClose: _propTypes2.default.func

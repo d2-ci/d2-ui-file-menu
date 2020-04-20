@@ -56,6 +56,8 @@ var _d2UiFavoritesDialog = require('@dhis2/d2-ui-favorites-dialog');
 
 var _d2UiFavoritesDialog2 = _interopRequireDefault(_d2UiFavoritesDialog);
 
+var _util = require('./util');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var OpenMenuItem = function (_Component) {
@@ -141,7 +143,7 @@ OpenMenuItem.defaultProps = {
 };
 
 OpenMenuItem.propTypes = {
-    fileType: _propTypes2.default.oneOf(['chart', 'eventChart', 'reportTable', 'eventReport', 'map']),
+    fileType: _propTypes2.default.oneOf(_util.supportedFileTypes),
     refreshDialogData: _propTypes2.default.bool,
     onOpen: _propTypes2.default.func,
     onClose: _propTypes2.default.func,
