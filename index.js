@@ -1,10 +1,12 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _FileMenu = require('./FileMenu');
+require("./locales/");
+
+var _FileMenu = require("./FileMenu");
 
 var _FileMenu2 = _interopRequireDefault(_FileMenu);
 
