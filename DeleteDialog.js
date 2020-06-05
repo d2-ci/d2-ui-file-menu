@@ -88,12 +88,12 @@ var DeleteDialog = function DeleteDialog(props) {
             _react2.default.createElement(
                 _Button2.default,
                 { onClick: onRequestClose, color: 'primary' },
-                'Cancel'
+                _d2I18n2.default.t('Cancel')
             ),
             _react2.default.createElement(
                 _Button2.default,
                 { onClick: deleteFavorite, color: 'primary' },
-                'Delete'
+                _d2I18n2.default.t('Delete')
             )
         )
     );
