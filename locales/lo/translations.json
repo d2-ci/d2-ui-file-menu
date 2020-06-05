@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "ຍົກເລີກ",
     "Delete": "ລົບ",
     "File": "ເອກະສານ",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "ຊື່",
     "Description": "ລາຍລະອຽດ",
-    "Cancel": "ຍົກເລີກ",
     "Rename": "ປ່ຽນຊື່",
     "Save {{what}} as": "",
     "Save": "ບັນທຶກ",

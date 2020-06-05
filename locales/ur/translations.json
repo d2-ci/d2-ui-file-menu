@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "منسوخ",
     "Delete": "حذف",
     "File": "فائل",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "نام",
     "Description": "تفصیلات",
-    "Cancel": "منسوخ",
     "Rename": "نام بدلو",
     "Save {{what}} as": "",
     "Save": "محفوظ",

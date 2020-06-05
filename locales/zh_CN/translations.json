@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "取消",
     "Delete": "删除",
     "File": "文件",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "名称",
     "Description": "描述",
-    "Cancel": "取消",
     "Rename": "",
     "Save {{what}} as": "",
     "Save": "保存",

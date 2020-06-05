@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "لابردن",
     "Delete": "سرينةوة",
     "File": "",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "",
     "Description": "",
-    "Cancel": "لابردن",
     "Rename": "",
     "Save {{what}} as": "",
     "Save": "خةزن كردن",

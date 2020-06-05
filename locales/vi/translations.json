@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "Hủy",
     "Delete": "Xóa",
     "File": "Tập tin",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "Tên tài khoản",
     "Description": "Miêu tả",
-    "Cancel": "Hủy",
     "Rename": "Đổi tên",
     "Save {{what}} as": "",
     "Save": "Lưu lại",

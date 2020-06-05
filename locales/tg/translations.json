@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "Бекор кардан",
     "Delete": "Нест кардан",
     "File": "Файл",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "Ном",
     "Description": "Тавсиф",
-    "Cancel": "Бекор кардан",
     "Rename": "Ивази ном",
     "Save {{what}} as": "",
     "Save": "Захира кардан",

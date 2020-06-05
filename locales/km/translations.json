@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "បោះបង់",
     "Delete": "​លុប​",
     "File": "",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "ឈ្មោះ",
     "Description": "ការ​ពិពណ៌នា",
-    "Cancel": "បោះបង់",
     "Rename": "ប្ដូរ​ឈ្មោះ",
     "Save {{what}} as": "",
     "Save": "រក្សាទុក​",

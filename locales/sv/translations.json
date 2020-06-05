@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "Annullera",
     "Delete": "Radera",
     "File": "File",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "Namn",
     "Description": "Beskrivning",
-    "Cancel": "Annullera",
     "Rename": "Döpa om",
     "Save {{what}} as": "",
     "Save": "Spara",

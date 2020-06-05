@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "Kansela",
     "Delete": "Soe",
     "File": "",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "Naran",
     "Description": "Deskrisaun",
-    "Cancel": "Kansela",
     "Rename": "Tau naran foun",
     "Save {{what}} as": "",
     "Save": "Rai",

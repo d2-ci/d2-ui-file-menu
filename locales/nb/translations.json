@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "Slett {{what}}",
     "This {{what}} will be deleted. Continue?": "Denne {{hva}} vil bli slettet. Fortsett?",
+    "Cancel": "Avbryt",
     "Delete": "Slett",
     "File": "Fil",
     "Open in this app": "Åpne i denne appen",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "Gi nytt navn til {{what}}",
     "Name": "Navn",
     "Description": "Beskrivelse",
-    "Cancel": "Avbryt",
     "Rename": "Gi nytt navn",
     "Save {{what}} as": "Lagre {{what}} som",
     "Save": "Lagre",

@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "Отменить",
     "Delete": "Удалить",
     "File": "Файл",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "Название",
     "Description": "Описание",
-    "Cancel": "Отменить",
     "Rename": "Переименовать",
     "Save {{what}} as": "",
     "Save": "Сохранить",

@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "Eliminar {{que}}",
     "This {{what}} will be deleted. Continue?": "Este {{que}} será eliminado. ¿Continuar?",
+    "Cancel": "Cancelar",
     "Delete": "Eliminar",
     "File": "Fichero",
     "Open in this app": "Abierto en esta aplicación",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "Renombrar {{que}}",
     "Name": "Nombre",
     "Description": "Descripción",
-    "Cancel": "Cancelar",
     "Rename": "Renombrar",
     "Save {{what}} as": "Guardar {{que}} como",
     "Save": "Guardar",

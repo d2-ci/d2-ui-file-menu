@@ -1,6 +1,7 @@
 {
     "Delete {{what}}": "",
     "This {{what}} will be deleted. Continue?": "",
+    "Cancel": "رد یې کړئ [فسخ یې کړئ ]",
     "Delete": "خذف یې کړئ",
     "File": "فایل",
     "Open in this app": "",
@@ -11,7 +12,6 @@
     "Rename {{what}}": "",
     "Name": "نوم [ ژباړه ـ نښه ـ نوم ]",
     "Description": "تشریح [ ژباړه ـ نښه ـ تشریح ]",
-    "Cancel": "رد یې کړئ [فسخ یې کړئ ]",
     "Rename": "بیا نومول",
     "Save {{what}} as": "",
     "Save": "ثبت یې کړئ [ ژباړه - ثبت کړئ ]",
