@@ -1,0 +1,23 @@
+{
+    "Delete {{what}}": "Supprimer {{what}}",
+    "This {{what}} will be deleted. Continue?": "Le {{what}} actuel sera supprimé. Continuer ?",
+    "Cancel": "Annuler",
+    "Delete": "Supprimer",
+    "File": "Fichier",
+    "Open in this app": "Ouvrir dans cette app",
+    "Close": "Fermer",
+    "Get link": "Obtenir le lien",
+    "New": "Nouveau",
+    "Open": "Ouvrir",
+    "Rename {{what}}": "Renommer {{what}}",
+    "Name": "Nom",
+    "Description": "Description",
+    "Rename": "Renommer",
+    "Save {{what}} as": "Enregistrer  {{what}} sous",
+    "Save": "Enregistrer",
+    "Save as...": "Enregistrer sous...",
+    "Share": "Partager",
+    "Translate": "Traduire",
+    "Write interpretation": "Ecrire une interprétation",
+    "Post": "Publier"
+}
