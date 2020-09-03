@@ -1,0 +1,23 @@
+{
+    "Delete {{what}}": "حذف {{what}}",
+    "This {{what}} will be deleted. Continue?": "سيتم حذف {{what}}. استمرار؟",
+    "Cancel": "إلغاء",
+    "Delete": "حذف",
+    "File": "ملف",
+    "Open in this app": "فتح في هذا التطبيق",
+    "Close": "إغلاق",
+    "Get link": "الحصول على الرابط",
+    "New": "جديد",
+    "Open": "فتح",
+    "Rename {{what}}": "إعادة تسمية {{what}}",
+    "Name": "الاسم",
+    "Description": "الوصف",
+    "Rename": "إعادة التسمية",
+    "Save {{what}} as": "حفظ {{what}} كـ ",
+    "Save": "حفظ",
+    "Save as...": "حفظ بإسم",
+    "Share": "مشاركة",
+    "Translate": "ترجمة",
+    "Write interpretation": "كتابة تفسير",
+    "Post": "إرسال"
+}
