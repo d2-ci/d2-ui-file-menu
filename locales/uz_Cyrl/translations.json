@@ -6,9 +6,9 @@
     "File": "Файл",
     "Open in this app": "",
     "Close": "Ёпиқ",
-    "Get link": "",
-    "New": "",
-    "Open": "",
+    "Get link": "Ҳаволани олинг",
+    "New": "Янги",
+    "Open": "Очиш",
     "Rename {{what}}": "",
     "Name": "Исми",
     "Description": "Тавсиф",
@@ -17,7 +17,7 @@
     "Save": "Сақлаш",
     "Save as...": "",
     "Share": "Баҳам кўриш",
-    "Translate": "",
-    "Write interpretation": "",
+    "Translate": "Таржима қилинг",
+    "Write interpretation": "Шарҳ ёзиш",
     "Post": ""
 }
