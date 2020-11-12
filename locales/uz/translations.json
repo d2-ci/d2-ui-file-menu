@@ -1,0 +1,23 @@
+{
+    "Delete {{what}}": "Ўчириш {{what}}",
+    "This {{what}} will be deleted. Continue?": "Ушбу {{what}} ўчирилади. Давом этасизми?",
+    "Cancel": "Бекор қилиш",
+    "Delete": "Ўчириш",
+    "File": "Файл",
+    "Open in this app": "Ушбу иловада очинг",
+    "Close": "Ёпиш",
+    "Get link": "Ҳаволани олинг",
+    "New": "Янги",
+    "Open": "Очиш",
+    "Rename {{what}}": "Қайта номлаш {{what}}",
+    "Name": "Исми",
+    "Description": "Тавсиф",
+    "Rename": "Қайта номлаш",
+    "Save {{what}} as": "{{what}} ни сифатида сақлаш",
+    "Save": "Сақлаш",
+    "Save as...": "Сифатида сақлаш",
+    "Share": "Бўлишиш",
+    "Translate": "Таржима қилинг",
+    "Write interpretation": "Талқин ёзиш",
+    "Post": "Почта"
+}
