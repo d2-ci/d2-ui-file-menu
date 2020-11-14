@@ -1,0 +1,23 @@
+{
+    "Delete {{what}}": "Удалить {{what}}",
+    "This {{what}} will be deleted. Continue?": "{{what}} будет удален. Продолжить?",
+    "Cancel": "Отменить",
+    "Delete": "Удалить",
+    "File": "Файл",
+    "Open in this app": "Открыть в данном приложении",
+    "Close": "Закрыть",
+    "Get link": "Получить ссылку",
+    "New": "Новый",
+    "Open": "Открыть",
+    "Rename {{what}}": "Переименовать {{what}}",
+    "Name": "Название",
+    "Description": "Описание",
+    "Rename": "Переименовать",
+    "Save {{what}} as": "Сохранить  {{what}}  как",
+    "Save": "Сохранить",
+    "Save as...": "Сохранить как...",
+    "Share": "Поделиться",
+    "Translate": "Перевести",
+    "Write interpretation": "Написать интерпретацию",
+    "Post": ""
+}
